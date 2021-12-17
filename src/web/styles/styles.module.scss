@@ -1,0 +1,11 @@
+.styled-icon {
+  &--fade {
+    display: none;
+    padding-right: 10px;
+  }
+
+  &:hover &--fade {
+    align-items: center;
+    display: flex;
+  }
+}

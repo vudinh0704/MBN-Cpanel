@@ -1,0 +1,51 @@
+
+nginx:
+  build: ./nginx
+  links:
+    - server-john
+    - server-paul
+    - server-george
+    - server-ringo
+  ports:
+   - "8181:80"
+
+server-john:
+  build: ./server
+  links:
+    - redis
+  expose:
+    - "3000"
+  environment:
+    - NAME=John
+
+server-paul:
+  build: ./server
+  links:
+    - redis
+  expose:
+    - "3000"
+  environment:
+    - NAME=Paul
+
+server-george:
+  build: ./server
+  links:
+    - redis
+  expose:
+    - "3000"
+  environment:
+    - NAME=George
+
+server-ringo:
+  build: ./server
+  links:
+    - redis
+  expose:
+    - "3000"
+  environment:
+    - NAME=Ringo
+
+redis:
+  build: ./redis
+  expose:
+    - "6379"

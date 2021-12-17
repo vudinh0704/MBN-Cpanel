@@ -1,0 +1,74 @@
+// colors
+$BlackTextColor: #3c4146;
+$GrayTextColor: #657786;
+$DarkLineColor: #d0d6e0;
+$LightLineColor: #e6ecf0;
+
+$Background: #f0f2f5;
+$LightBackground: #f7f8f9;
+$WhiteBackground: #ffffff;
+
+$BrandColor: #0499a8;
+$LightBrandColor: #20cecc;
+
+$FollowBorderColor: #afe1e1;
+$FollowBackground: #f0ffff;
+
+// shared variables
+$HeaderHeight: 60px;
+$BorderRadius: 8px;
+$Baseurl: '';
+
+$xs: 0px;
+$sm: 576px;
+$md: 768px;
+$lg: 992px;
+$xl: 1200px;
+
+@mixin smUp {
+  @media (min-width: #{$sm}) {
+    @content;
+  }
+}
+
+@mixin mdUp {
+  @media (min-width: #{$md}) {
+    @content;
+  }
+}
+
+@mixin lgUp {
+  @media (min-width: #{$lg}) {
+    @content;
+  }
+}
+
+@mixin xlUp {
+  @media (min-width: #{$xl}) {
+    @content;
+  }
+}
+
+@mixin sxOnly {
+  @media (max-width: #{$sm - 0.2px}) {
+    @content;
+  }
+}
+
+@mixin smOnly {
+  @media (min-width: #{$sm}) and (max-width: #{$md - 0.2px}) {
+    @content;
+  }
+}
+
+@mixin mdOnly {
+  @media (min-width: #{$md}) and (max-width: #{$lg - 0.2px}) {
+    @content;
+  }
+}
+
+@mixin lgOnly {
+  @media (min-width: #{$lg}) and (max-width: #{$xl - 0.2px}) {
+    @content;
+  }
+}

@@ -1,0 +1,5 @@
+#!/bin/sh
+. "$(dirname "$0")/_/husky.sh"
+# cd to 'main' project directory
+cd src/web
+npx lint-staged
